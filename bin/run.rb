@@ -58,7 +58,7 @@ loop do
     # return an appropriate response
 
     # YOUR CODE GOES BELOW HERE
-
+  puts @request
     # YOUR CODE GOES ABOVE HERE  ^
   end
 end

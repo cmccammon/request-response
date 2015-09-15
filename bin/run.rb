@@ -62,8 +62,23 @@ loop do
     # YOUR CODE GOES BELOW HERE
 
     resource = @params[:resource]
+    id = @params[:id]
 
 
+
+    if id.to_i > 10000
+      puts "Error 404 data not found"
+    elsif resource == "users" && id.to_i == 1
+      first = User.find(id.to_i)
+      # first.each do |first|
+      puts "User: #{first.first_name} #{first.last_name} age: #{first.age}"
+    else resource == "users"
+      list = User.all
+      list.each do |list|
+      puts "User: #{list.first_name} #{list.last_name} age: #{list.age}"
+      end
+
+    end
 
     # list = resource.all
     # list.each do |pull|
